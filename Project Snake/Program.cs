@@ -21,6 +21,14 @@ namespace Project_Snake
 
                 Raylib.DrawText("Snake", 225,250,100,Color.BLACK);
 
+                Objects startRuta = new Objects();
+                Objects avslutaRute = new Objects();
+
+                startRuta.x = 50;
+                startRuta.y = 50;
+                startRuta.z = 0;
+
+
                 Raylib.EndDrawing();
             }
 
