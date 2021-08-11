@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Collections.Generic;
+using System.Collections;
 using Raylib_cs;
 
 namespace Project_Snake
@@ -19,14 +20,21 @@ namespace Project_Snake
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.WHITE);
 
+                int heightStart = (screenWidth/2 - 250);
+                int widthStart = 550;
+                int heightQuit = (screenWidth/2 + 110);
+                int widthQuit = 550;
+
                 Raylib.DrawText("Snake", 225,250,100,Color.BLACK);
+                Raylib.DrawRectangle(heightStart, widthStart, 160, 80,Color.GREEN);
+                Raylib.DrawRectangle(heightQuit, widthQuit, 160, 80,Color.RED);
+                Raylib.DrawText("Start",screenWidth/2 - 250, 550,50,Color.BLACK);
+                Raylib.DrawText("Quit",screenWidth/2 + 110,550,50,Color.BLACK);
 
-                Objects startRuta = new Objects();
-                Objects avslutaRute = new Objects();
+                if(Raylib.CheckCollisionPointRec(Raylib.GetMousePosition,))
+                {
 
-                startRuta.x = 50;
-                startRuta.y = 50;
-                startRuta.z = 0;
+                }
 
 
                 Raylib.EndDrawing();
