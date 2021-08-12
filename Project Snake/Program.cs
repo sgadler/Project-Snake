@@ -52,14 +52,28 @@ namespace Project_Snake
         {
             Raylib.InitWindow(screenHeight,screenWidth,"SnakeGame");
 
+            Random generator = new Random();
+            int startÄppleX = generator.Next(0,15);
+            int startÄppleY = generator.Next(0,15);
+            int basStorlek = 50;
+
+            List<int> positionsLista = new List<int>();
+            
+            for(int i = 1; i < 15; i++)
+            {
+                int positioner = 50*i;
+                positionsLista.Add(positioner);
+            }
+
             while(!Raylib.WindowShouldClose())
             {
-            Raylib.BeginDrawing();
+                Raylib.BeginDrawing();
 
-            Raylib.ClearBackground(Color.GREEN);
-            Raylib.DrawText("Get Rekt", 1,1,100,Color.PINK);
+                Raylib.ClearBackground(Color.WHITE);
 
-            Raylib.EndDrawing();
+                Raylib.DrawRectangle(positionsLista[startÄppleX],positionsLista[startÄppleY],basStorlek,basStorlek,Color.RED);
+
+                Raylib.EndDrawing();
             }
         }
     }
