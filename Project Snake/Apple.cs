@@ -4,5 +4,6 @@ namespace Project_Snake
 {
     public class Apple:Object
     {
+        int points;
     }
 }

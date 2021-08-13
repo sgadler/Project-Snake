@@ -53,6 +53,11 @@ namespace Project_Snake
             Raylib.InitWindow(screenHeight,screenWidth,"SnakeGame");
 
             //ska göra en instans istället så att det blir lättare att göra kollisioner mellan äpplen och ormen.
+
+            while(!Raylib.WindowShouldClose())
+            {
+                
+            }
         }
     }
 }
